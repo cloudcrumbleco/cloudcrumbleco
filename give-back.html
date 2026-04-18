@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>give back — Cloud Crumble Co.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* =============================================
+   CLOUD CRUMBLE CO. — COMPLETE HOMEPAGE
+   Cloud SVG fix: viewBox="-10 -10 140 100"
+   Centre puff: cx=60,cy=20,r=28 → top=y−8
+   viewBox negative offset = 10px clearance
+   All containers: overflow:visible
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --pink:      #EF6D9B;
+  --butter:    #FFF8C8;
+  --lavender:  #EDD5FF;
+  --blush:     #FCC8DC;
+  --shell:     #FFF5F9;
+  --lilac:     #C87FE0;
+  --rose:      #A04060;
+  --midnight:  #4A1030;
+  --mint:      #D6F5E8;
+  --lemon:     #FFFAD0;
+  --school:    #FFE2EE;
+  --strawb:    #FFDDE8;
+  --biscoff:   #FFF0D8;
+  --hazel:     #F5E8D8;
+  --monster:   #EDE0F5;
+  --salted:    #E8D8F8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--shell);
+  color: var(--rose);
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+}
+.site-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ── NAV ── */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  height: 90px;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 10;
+}
+.logo-block { display: flex; flex-direction: row; align-items: center; gap: 14px; }
+.logo-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  letter-spacing: -1.2px;
+  color: var(--butter);
+  line-height: 1;
+}
+.logo-name span { color: #fff; }
+.logo-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.3px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.1;
+  margin-top: 2px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(255,255,255,0.88);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-link:hover { color: var(--butter); }
+.nav-btn {
+  background: var(--butter);
+  border: none;
+  color: var(--pink);
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.nav-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+
+/* ── HERO ── */
+.hero {
+  background: var(--pink);
+  border-radius: 28px;
+  min-height: 580px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 116px 2.5rem 3rem;
+  max-width: 520px;
+}
+.world-first-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.2);
+  border: 1.5px solid rgba(255,255,255,0.38);
+  border-radius: 50px;
+  padding: 7px 18px;
+  margin-bottom: 1.2rem;
+}
+.pill-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--butter);
+  flex-shrink: 0;
+}
+.pill-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+.badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.3rem;
+  flex-wrap: wrap;
+}
+.badge {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge-y { background: var(--butter); color: #906020; }
+.badge-l { background: var(--lavender); color: #5E1A80; }
+.badge-w { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.36); }
+.hero-headline {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 58px;
+  line-height: 0.93;
+  letter-spacing: -2.5px;
+  color: #fff;
+  margin-bottom: 1.3rem;
+}
+.hl-y { color: var(--butter); }
+.hl-l { color: var(--lavender); }
+.what-is-box {
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.28);
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-bottom: 1.6rem;
+}
+.wi-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 5px;
+}
+.wi-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.55;
+}
+.wi-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 4px;
+  font-weight: 300;
+}
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  background: #fff;
+  color: var(--pink);
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+.btn-ghost {
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  border: 2px solid rgba(255,255,255,0.36);
+  cursor: pointer;
+}
+
+/* Hero float cards */
+.hero-float {
+  position: absolute;
+  right: 2.2rem;
+  top: 90px;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 14px;
+  z-index: 3;
+}
+.storm-card {
+  background: var(--lavender);
+  border-radius: 20px;
+  padding: 20px 18px;
+  width: 196px;
+  border: 2px solid var(--lilac);
+  margin-bottom: 8px;
+}
+.sc-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6030A0;
+  margin-bottom: 4px;
+}
+.sc-val {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  color: #6030A0;
+  letter-spacing: -0.5px;
+}
+.sc-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #9060C0;
+  margin-top: 3px;
+  font-weight: 300;
+}
+.sc-tag {
+  background: var(--pink);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+.forecast-card {
+  background: var(--butter);
+  border-radius: 22px;
+  padding: 17px 16px;
+  width: 196px;
+  border: 2.5px solid #FFE060;
+}
+.fc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.fc-label-top {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #906020;
+}
+.fc-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+  color: var(--rose);
+  margin-bottom: 2px;
+}
+.fc-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #C08060;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+.fc-chips { display: flex; gap: 5px; margin-bottom: 11px; }
+.chip {
+  width: 25px; height: 25px;
+  border-radius: 7px;
+  border: 1.5px solid rgba(0,0,0,0.07);
+}
+.fc-price {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 21px;
+  color: var(--pink);
+}
+.fc-per {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #C0A080;
+  margin-top: 2px;
+  font-weight: 300;
+}
+.fc-btn {
+  margin-top: 11px;
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ── BODY ── */
+.body { padding: 0; }
+.section { padding: 2.4rem 0; }
+.section-eye {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--lilac);
+  margin-bottom: 10px;
+}
+.section-h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  letter-spacing: -0.8px;
+  color: var(--rose);
+  margin-bottom: 1.6rem;
+}
+
+/* ── FLAVOUR GRID ── */
+/* THE FIX: cards overflow:visible, SVG viewBox="-10 -10 140 100" */
+.flavour-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.flavour-card {
+  border-radius: 20px;
+  padding: 24px 14px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+.flavour-card svg {
+  /* CRITICAL: overflow visible */
+  overflow: visible;
+  display: block;
+  flex-shrink: 0;
+}
+.flavour-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  margin-top: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.flavour-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  margin-top: 5px;
+  font-weight: 300;
+  opacity: 0.82;
+  line-height: 1.4;
+}
+
+/* ── PRODUCT GRID ── */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.product-card {
+  background: #fff;
+  border-radius: 22px;
+  border: 2px solid var(--blush);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* CRITICAL: overflow visible for cloud tops */
+  overflow: visible;
+}
+.product-card.featured { border-color: var(--pink); }
+.product-img-wrap {
+  /* CRITICAL: overflow visible */
+  overflow: visible;
+  padding: 18px 16px 0;
+  flex-shrink: 0;
+}
+.product-img-bg {
+  border-radius: 14px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  position: relative;
+}
+.product-img-bg svg {
+  overflow: visible;
+}
+.pop-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pink);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 9px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  z-index: 4;
+  letter-spacing: 0.3px;
+}
+.product-body { padding: 14px 14px 16px; display: flex; flex-direction: column; flex: 1; }
+.product-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--rose);
+  margin-bottom: 5px;
+}
+.product-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #C080A0;
+  line-height: 1.55;
+  margin-bottom: 12px;
+  font-weight: 300;
+  flex: 1;
+}
+.product-price {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--pink);
+  margin-bottom: 3px;
+}
+.product-per {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #C0A8B8;
+  margin-bottom: 14px;
+}
+.product-btn {
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 13px 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.product-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(239,109,155,0.35); }
+
+/* ── INFO STRIP ── */
+.info-strip {
+  background: var(--butter);
+  border-radius: 22px;
+  padding: 2rem;
+  border: 2px solid #FFE060;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.info-left { flex: 1; min-width: 220px; }
+.info-head {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--rose);
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.info-body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #906020;
+  line-height: 1.65;
+  font-weight: 300;
+}
+.info-stats { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.info-stat { text-align: center; }
+.info-num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--pink);
+}
+.info-lbl {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #906020;
+}
+
+/* ── FEATURE BLOCK ── */
+.feature-block {
+  background: var(--lavender);
+  border-radius: 22px;
+  padding: 2rem;
+  border: 2px solid var(--lilac);
+  margin-bottom: 2rem;
+}
+.fb-eye {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #6030A0;
+  margin-bottom: 10px;
+}
+.fb-head {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 21px;
+  color: var(--midnight);
+  margin-bottom: 10px;
+  letter-spacing: -0.4px;
+}
+.fb-body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #5030A0;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 1.4rem;
+}
+.fb-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.fb-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 10px;
+  border: 1.5px solid var(--lilac);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+.fb-card svg { overflow: visible; }
+.fb-name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--midnight);
+  margin-top: 8px;
+}
+.fb-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #7040A0;
+  margin-top: 4px;
+  font-weight: 300;
+}
+
+/* ── CHARITY ── */
+.charity-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.charity-top {
+  background: var(--pink);
+  padding: 1.8rem 2rem 1.4rem;
+}
+.charity-eye {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 8px;
+}
+.charity-head {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+.charity-body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.65;
+  font-weight: 300;
+}
+.charity-bottom {
+  background: var(--butter);
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.charity-stat { text-align: center; }
+.cs-num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  color: var(--pink);
+}
+.cs-lbl {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #906020;
+  margin-top: 2px;
+}
+.charity-divider {
+  width: 1px;
+  height: 48px;
+  background: #FFE060;
+  flex-shrink: 0;
+}
+.charity-note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #906020;
+  line-height: 1.6;
+  font-weight: 300;
+  flex: 1;
+  min-width: 160px;
+}
+
+/* ── INSTAGRAM ── */
+.ig-block {
+  background: var(--lavender);
+  border-radius: 22px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.ig-head {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 21px;
+  color: var(--midnight);
+}
+.ig-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #7040A0;
+  margin-top: 5px;
+  font-weight: 300;
+}
+.btn-ig {
+  background: var(--pink);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 2px solid var(--blush);
+  padding: 1.4rem 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.foot-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--pink);
+}
+.foot-t {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: var(--lilac);
+}
+</style>
+/* ── PAGE-SPECIFIC ── */
+.page-header {
+  background: var(--pink);
+  border-radius: 28px;
+  min-height: 170px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.page-header-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+}
+.page-title-block {
+  position: relative;
+  z-index: 2;
+  padding: 100px 2.5rem 2rem;
+}
+.page-eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 6px;
+}
+.page-h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  letter-spacing: -1.5px;
+  color: #fff;
+  line-height: 0.95;
+}
+.page-h1 .y { color: var(--butter); }
+.page-h1 .lv { color: var(--lavender); }
+.page-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,0.82);
+  margin-top: 10px;
+  font-weight: 300;
+  max-width: 480px;
+  line-height: 1.6;
+}
+.card {
+  background: #fff;
+  border-radius: 20px;
+  border: 2px solid var(--blush);
+  padding: 2rem;
+}
+.card-pink { background: var(--pink); border-color: var(--pink); color: #fff; }
+.card-lav  { background: var(--lavender); border-color: var(--lilac); }
+.card-but  { background: var(--butter); border-color: #FFE060; }
+.card-mint { background: var(--mint); border-color: #50A878; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.three-col { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.four-col { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+.section-pad { padding: 2.4rem 0; }
+.eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--lilac);
+  margin-bottom: 10px;
+}
+.h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 34px;
+  letter-spacing: -0.8px;
+  color: var(--rose);
+  margin-bottom: 1rem;
+}
+.h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--rose);
+  margin-bottom: 8px;
+}
+.body-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #C080A0;
+  line-height: 1.7;
+  font-weight: 300;
+}
+.body-text.dark { color: var(--rose); }
+.pill {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.pill-pink { background: var(--pink); color: #fff; }
+.pill-but  { background: var(--butter); color: #906020; border: 1.5px solid #FFE060; }
+.pill-lav  { background: var(--lavender); color: #5E1A80; }
+.ig-cta {
+  background: var(--lavender);
+  border-radius: 22px;
+  padding: 1.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+.ig-h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 21px;
+  color: var(--midnight);
+}
+.ig-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #7040A0;
+  margin-top: 4px;
+  font-weight: 300;
+}
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+.btn-pink { background: var(--pink); color: #fff; }
+.btn-white { background: #fff; color: var(--pink); }
+.btn-ghost-pink { background: transparent; color: var(--pink); border: 2px solid var(--pink); }
+</style>
+</head>
+<body>
+
+<div class="site-wrap" style="padding-top:12px;">
+  <div class="page-header">
+    <svg class="page-header-bg" viewBox="0 0 900 170" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.2"><rect x="580" y="-30" width="320" height="120" rx="60" fill="#FFF8C8"/><circle cx="614" cy="-30" r="64" fill="#FFF8C8"/><circle cx="706" cy="-52" r="82" fill="#FFF8C8"/><circle cx="804" cy="-28" r="62" fill="#FFF8C8"/><circle cx="888" cy="-10" r="50" fill="#FFF8C8"/></g>
+      <g opacity="0.18"><rect x="-50" y="90" width="260" height="100" rx="50" fill="#EDD5FF"/><circle cx="-18" cy="90" r="54" fill="#EDD5FF"/><circle cx="70" cy="70" r="70" fill="#EDD5FF"/><circle cx="172" cy="92" r="52" fill="#EDD5FF"/></g>
+      <path d="M520,10 Q590,70 560,140" stroke="#fff" stroke-width="1.8" fill="none" opacity="0.1" stroke-dasharray="9 7"/>
+    </svg>
+    <nav class="nav">
+    <div class="logo-block">
+      <!-- Cloud icon logo: circle clouds with heart, viewBox gives full top clearance -->
+      <svg width="56" height="52" viewBox="-6 -6 72 62" xmlns="http://www.w3.org/2000/svg" overflow="visible" style="flex-shrink:0;">
+        <!-- Cloud body -->
+        <rect x="3" y="28" width="54" height="24" rx="12" fill="rgba(255,255,255,0.28)"/>
+        <circle cx="15" cy="28" r="14" fill="rgba(255,255,255,0.25)"/>
+        <circle cx="30" cy="14" r="18" fill="rgba(255,255,255,0.22)"/>
+        <circle cx="47" cy="29" r="12" fill="rgba(255,255,255,0.25)"/>
+        <!-- Heart in the cloud -->
+        <path d="M30 40C30 40 22 35 22 30.5C22 27.8 24.2 25.5 27 25.5C28.3 25.5 29.4 26.2 30 26.6C30.6 26.2 31.7 25.5 33 25.5C35.8 25.5 38 27.8 38 30.5C38 35 30.2 40.5 30 40Z" fill="#FFF8C8" opacity="0.95"/>
+      </svg>
+      <div>
+        <div class="logo-name">Cloud Crumble <span>Co.</span></div>
+        <div class="logo-tagline">welcome to cloud cookie land</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a class="nav-link" href="/clouds.html">our clouds</a>
+      <a class="nav-link" href="/forecast.html">the forecast</a>
+      <a class="nav-link" href="/give-back.html">give back</a>
+      <a class="nav-link ig-icon" href="https://instagram.com/cloudcrumbleco" target="_blank" aria-label="Instagram" style="display:flex;align-items:center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="6" stroke="rgba(255,255,255,0.88)" stroke-width="2" fill="none"/>
+          <circle cx="12" cy="12" r="4.5" stroke="rgba(255,255,255,0.88)" stroke-width="2" fill="none"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="rgba(255,255,255,0.88)"/>
+        </svg>
+      </a>
+      <button class="nav-btn">order now</button>
+    </div>
+  </nav>
+    <div class="page-title-block">
+      <div class="page-eyebrow">cloud crumble co.</div>
+      <h1 class="page-h1">give back</h1>
+    </div>
+  </div>
+</div>
+
+<div class="site-wrap">
+<div class="body">
+
+<section class="section-pad">
+  <div class="eyebrow">the silver lining</div>
+  <div class="h2">every cloud gives something back</div>
+
+  <div class="two-col" style="margin-bottom:2rem;gap:24px;">
+    <div>
+      <p class="body-text" style="margin-bottom:1rem;">10% of every single sale goes to the Palestine Children's Relief Fund via the Emirates Red Crescent. not at the end of the year. not from profits. from every sale, from day one.</p>
+      <p class="body-text" style="margin-bottom:1rem;">we post the receipts publicly every month on instagram. no exceptions. no small print. you can see exactly where the money goes.</p>
+      <p class="body-text">the charity angle is baked in, not bolted on. it is a founding principle of Cloud Crumble Co., not a marketing tactic.</p>
+    </div>
+    <div class="card card-pink">
+      <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:64px;color:#fff;letter-spacing:-3px;line-height:1;">10%</div>
+      <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:rgba(255,255,255,0.9);margin-top:6px;">of every sale</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);margin-top:4px;font-weight:300;">donated to the Palestine Children's Relief Fund</div>
+      <div style="font-family:'Poppins',sans-serif;font-size:11px;color:rgba(255,255,255,0.6);margin-top:8px;font-weight:300;">via Emirates Red Crescent · posted monthly</div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="eyebrow" style="margin-top:2.5rem;">how it works</div>
+  <div class="h2" style="font-size:24px;margin-bottom:1.2rem;">transparent, legal, permanent</div>
+
+  <div class="three-col" style="margin-bottom:2rem;">
+    <div class="card">
+      <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:32px;color:var(--pink);margin-bottom:8px;">01</div>
+      <div class="h3" style="font-size:16px;margin-bottom:8px;">every sale counts</div>
+      <p class="body-text">10% of the value of every box sold goes directly to the donation pot. whether you buy 6 clouds or 32, your purchase contributes.</p>
+    </div>
+    <div class="card">
+      <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:32px;color:var(--pink);margin-bottom:8px;">02</div>
+      <div class="h3" style="font-size:16px;margin-bottom:8px;">via the ERC</div>
+      <p class="body-text">we donate via the Emirates Red Crescent, a fully licensed UAE charity channel. this is fully compliant with UAE Federal Law No. 3 of 2021.</p>
+    </div>
+    <div class="card">
+      <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:32px;color:var(--pink);margin-bottom:8px;">03</div>
+      <div class="h3" style="font-size:16px;margin-bottom:8px;">receipts posted monthly</div>
+      <p class="body-text">every month we post the ERC donation receipt publicly on instagram. no selective reporting, no quarterly rounding. just the receipt.</p>
+    </div>
+  </div>
+
+  <!-- PROJECTED IMPACT -->
+  <div class="card card-mint" style="margin-bottom:1.5rem;">
+    <div class="eyebrow" style="color:#2A6048;">projected impact</div>
+    <div class="h3" style="color:#2A6048;margin-bottom:1rem;">what your clouds make possible</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+      <div style="text-align:center;">
+        <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:28px;color:#2A6048;">AED 60K</div>
+        <div style="font-family:'Poppins',sans-serif;font-size:12px;color:#3A7050;margin-top:4px;font-weight:300;">year one target<br>at AED 50K/month revenue</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:28px;color:#2A6048;">AED 180K</div>
+        <div style="font-family:'Poppins',sans-serif;font-size:12px;color:#3A7050;margin-top:4px;font-weight:300;">year two target<br>at AED 150K/month revenue</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Poppins',sans-serif;font-weight:900;font-size:28px;color:#2A6048;">always</div>
+        <div style="font-family:'Poppins',sans-serif;font-size:12px;color:#3A7050;margin-top:4px;font-weight:300;">10% of every sale<br>no exceptions, ever</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ig-cta">
+    <div>
+      <div class="ig-h2">see the receipts</div>
+      <div class="ig-sub">monthly donation receipts posted publicly · no exceptions</div>
+    </div>
+    <a href="https://instagram.com/cloudcrumbleco" target="_blank" class="btn btn-pink">@cloudcrumbleco</a>
+  </div>
+</section>
+
+</div>
+</div>
+
+<div class="site-wrap">
+<footer>
+  <div class="foot-logo">Cloud Crumble Co.</div>
+  <div class="foot-t">handmade in Dubai · halal · no artificial colours</div>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div class="foot-t">Emirates Red Crescent partner</div>
+    <a href="https://instagram.com/cloudcrumbleco" target="_blank" aria-label="Instagram" style="display:flex;align-items:center;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="6" stroke="#C87FE0" stroke-width="2" fill="none"/>
+        <circle cx="12" cy="12" r="4.5" stroke="#C87FE0" stroke-width="2" fill="none"/>
+        <circle cx="17.5" cy="6.5" r="1.2" fill="#C87FE0"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+</div>
+</body>
+</html>
